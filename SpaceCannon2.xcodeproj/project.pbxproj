@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CABA974719723805000EB990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974619723805000EB990 /* Foundation.framework */; };
+		CABA974919723805000EB990 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974819723805000EB990 /* CoreGraphics.framework */; };
+		CABA974B19723805000EB990 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974A19723805000EB990 /* UIKit.framework */; };
+		CABA974D19723805000EB990 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974C19723805000EB990 /* SpriteKit.framework */; };
+		CABA975319723805000EB990 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CABA975119723805000EB990 /* InfoPlist.strings */; };
+		CABA975519723805000EB990 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CABA975419723805000EB990 /* main.m */; };
+		CABA975919723805000EB990 /* BRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CABA975819723805000EB990 /* BRAppDelegate.m */; };
+		CABA975C19723805000EB990 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CABA975A19723805000EB990 /* Main.storyboard */; };
+		CABA975F19723805000EB990 /* BRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABA975E19723805000EB990 /* BRViewController.m */; };
+		CABA976219723805000EB990 /* BRMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = CABA976119723805000EB990 /* BRMyScene.m */; };
+		CABA976419723805000EB990 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA976319723805000EB990 /* Spaceship.png */; };
+		CABA976619723805000EB990 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CABA976519723805000EB990 /* Images.xcassets */; };
+		CABA976D19723805000EB990 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA976C19723805000EB990 /* XCTest.framework */; };
+		CABA976E19723805000EB990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974619723805000EB990 /* Foundation.framework */; };
+		CABA976F19723805000EB990 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974A19723805000EB990 /* UIKit.framework */; };
+		CABA977719723805000EB990 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CABA977519723805000EB990 /* InfoPlist.strings */; };
+		CABA977919723805000EB990 /* SpaceCannon2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CABA977819723805000EB990 /* SpaceCannon2Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CABA977019723805000EB990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CABA973B19723805000EB990 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CABA974219723805000EB990;
+			remoteInfo = SpaceCannon2;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CABA974319723805000EB990 /* SpaceCannon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceCannon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CABA974619723805000EB990 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CABA974819723805000EB990 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CABA974A19723805000EB990 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CABA974C19723805000EB990 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		CABA975019723805000EB990 /* SpaceCannon2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceCannon2-Info.plist"; sourceTree = "<group>"; };
+		CABA975219723805000EB990 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CABA975419723805000EB990 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CABA975619723805000EB990 /* SpaceCannon2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpaceCannon2-Prefix.pch"; sourceTree = "<group>"; };
+		CABA975719723805000EB990 /* BRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRAppDelegate.h; sourceTree = "<group>"; };
+		CABA975819723805000EB990 /* BRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRAppDelegate.m; sourceTree = "<group>"; };
+		CABA975B19723805000EB990 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CABA975D19723805000EB990 /* BRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRViewController.h; sourceTree = "<group>"; };
+		CABA975E19723805000EB990 /* BRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRViewController.m; sourceTree = "<group>"; };
+		CABA976019723805000EB990 /* BRMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRMyScene.h; sourceTree = "<group>"; };
+		CABA976119723805000EB990 /* BRMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BRMyScene.m; sourceTree = "<group>"; };
+		CABA976319723805000EB990 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
+		CABA976519723805000EB990 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CABA976B19723805000EB990 /* SpaceCannon2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceCannon2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CABA976C19723805000EB990 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CABA977419723805000EB990 /* SpaceCannon2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceCannon2Tests-Info.plist"; sourceTree = "<group>"; };
+		CABA977619723805000EB990 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CABA977819723805000EB990 /* SpaceCannon2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceCannon2Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CABA974019723805000EB990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABA974919723805000EB990 /* CoreGraphics.framework in Frameworks */,
+				CABA974B19723805000EB990 /* UIKit.framework in Frameworks */,
+				CABA974D19723805000EB990 /* SpriteKit.framework in Frameworks */,
+				CABA974719723805000EB990 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABA976819723805000EB990 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABA976D19723805000EB990 /* XCTest.framework in Frameworks */,
+				CABA976F19723805000EB990 /* UIKit.framework in Frameworks */,
+				CABA976E19723805000EB990 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CABA973A19723805000EB990 = {
+			isa = PBXGroup;
+			children = (
+				CABA974E19723805000EB990 /* SpaceCannon2 */,
+				CABA977219723805000EB990 /* SpaceCannon2Tests */,
+				CABA974519723805000EB990 /* Frameworks */,
+				CABA974419723805000EB990 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CABA974419723805000EB990 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CABA974319723805000EB990 /* SpaceCannon2.app */,
+				CABA976B19723805000EB990 /* SpaceCannon2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CABA974519723805000EB990 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CABA974619723805000EB990 /* Foundation.framework */,
+				CABA974819723805000EB990 /* CoreGraphics.framework */,
+				CABA974A19723805000EB990 /* UIKit.framework */,
+				CABA974C19723805000EB990 /* SpriteKit.framework */,
+				CABA976C19723805000EB990 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CABA974E19723805000EB990 /* SpaceCannon2 */ = {
+			isa = PBXGroup;
+			children = (
+				CABA975719723805000EB990 /* BRAppDelegate.h */,
+				CABA975819723805000EB990 /* BRAppDelegate.m */,
+				CABA975A19723805000EB990 /* Main.storyboard */,
+				CABA975D19723805000EB990 /* BRViewController.h */,
+				CABA975E19723805000EB990 /* BRViewController.m */,
+				CABA976019723805000EB990 /* BRMyScene.h */,
+				CABA976119723805000EB990 /* BRMyScene.m */,
+				CABA976319723805000EB990 /* Spaceship.png */,
+				CABA976519723805000EB990 /* Images.xcassets */,
+				CABA974F19723805000EB990 /* Supporting Files */,
+			);
+			path = SpaceCannon2;
+			sourceTree = "<group>";
+		};
+		CABA974F19723805000EB990 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CABA975019723805000EB990 /* SpaceCannon2-Info.plist */,
+				CABA975119723805000EB990 /* InfoPlist.strings */,
+				CABA975419723805000EB990 /* main.m */,
+				CABA975619723805000EB990 /* SpaceCannon2-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CABA977219723805000EB990 /* SpaceCannon2Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CABA977819723805000EB990 /* SpaceCannon2Tests.m */,
+				CABA977319723805000EB990 /* Supporting Files */,
+			);
+			path = SpaceCannon2Tests;
+			sourceTree = "<group>";
+		};
+		CABA977319723805000EB990 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CABA977419723805000EB990 /* SpaceCannon2Tests-Info.plist */,
+				CABA977519723805000EB990 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CABA974219723805000EB990 /* SpaceCannon2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CABA977C19723805000EB990 /* Build configuration list for PBXNativeTarget "SpaceCannon2" */;
+			buildPhases = (
+				CABA973F19723805000EB990 /* Sources */,
+				CABA974019723805000EB990 /* Frameworks */,
+				CABA974119723805000EB990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpaceCannon2;
+			productName = SpaceCannon2;
+			productReference = CABA974319723805000EB990 /* SpaceCannon2.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CABA976A19723805000EB990 /* SpaceCannon2Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CABA977F19723805000EB990 /* Build configuration list for PBXNativeTarget "SpaceCannon2Tests" */;
+			buildPhases = (
+				CABA976719723805000EB990 /* Sources */,
+				CABA976819723805000EB990 /* Frameworks */,
+				CABA976919723805000EB990 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CABA977119723805000EB990 /* PBXTargetDependency */,
+			);
+			name = SpaceCannon2Tests;
+			productName = SpaceCannon2Tests;
+			productReference = CABA976B19723805000EB990 /* SpaceCannon2Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CABA973B19723805000EB990 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Brandon Richey";
+				TargetAttributes = {
+					CABA976A19723805000EB990 = {
+						TestTargetID = CABA974219723805000EB990;
+					};
+				};
+			};
+			buildConfigurationList = CABA973E19723805000EB990 /* Build configuration list for PBXProject "SpaceCannon2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CABA973A19723805000EB990;
+			productRefGroup = CABA974419723805000EB990 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CABA974219723805000EB990 /* SpaceCannon2 */,
+				CABA976A19723805000EB990 /* SpaceCannon2Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CABA974119723805000EB990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABA975319723805000EB990 /* InfoPlist.strings in Resources */,
+				CABA976619723805000EB990 /* Images.xcassets in Resources */,
+				CABA976419723805000EB990 /* Spaceship.png in Resources */,
+				CABA975C19723805000EB990 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABA976919723805000EB990 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABA977719723805000EB990 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CABA973F19723805000EB990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABA975F19723805000EB990 /* BRViewController.m in Sources */,
+				CABA975919723805000EB990 /* BRAppDelegate.m in Sources */,
+				CABA976219723805000EB990 /* BRMyScene.m in Sources */,
+				CABA975519723805000EB990 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CABA976719723805000EB990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CABA977919723805000EB990 /* SpaceCannon2Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CABA977119723805000EB990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CABA974219723805000EB990 /* SpaceCannon2 */;
+			targetProxy = CABA977019723805000EB990 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CABA975119723805000EB990 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CABA975219723805000EB990 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CABA975A19723805000EB990 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CABA975B19723805000EB990 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CABA977519723805000EB990 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CABA977619723805000EB990 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CABA977A19723805000EB990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		CABA977B19723805000EB990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CABA977D19723805000EB990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpaceCannon2/SpaceCannon2-Prefix.pch";
+				INFOPLIST_FILE = "SpaceCannon2/SpaceCannon2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CABA977E19723805000EB990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpaceCannon2/SpaceCannon2-Prefix.pch";
+				INFOPLIST_FILE = "SpaceCannon2/SpaceCannon2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CABA978019723805000EB990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpaceCannon2.app/SpaceCannon2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpaceCannon2/SpaceCannon2-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SpaceCannon2Tests/SpaceCannon2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CABA978119723805000EB990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SpaceCannon2.app/SpaceCannon2";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpaceCannon2/SpaceCannon2-Prefix.pch";
+				INFOPLIST_FILE = "SpaceCannon2Tests/SpaceCannon2Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CABA973E19723805000EB990 /* Build configuration list for PBXProject "SpaceCannon2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CABA977A19723805000EB990 /* Debug */,
+				CABA977B19723805000EB990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CABA977C19723805000EB990 /* Build configuration list for PBXNativeTarget "SpaceCannon2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CABA977D19723805000EB990 /* Debug */,
+				CABA977E19723805000EB990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CABA977F19723805000EB990 /* Build configuration list for PBXNativeTarget "SpaceCannon2Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CABA978019723805000EB990 /* Debug */,
+				CABA978119723805000EB990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CABA973B19723805000EB990 /* Project object */;
+}
