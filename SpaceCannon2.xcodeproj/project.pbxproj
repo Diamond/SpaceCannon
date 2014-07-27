@@ -24,6 +24,18 @@
 		CABA976F19723805000EB990 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974A19723805000EB990 /* UIKit.framework */; };
 		CABA977719723805000EB990 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CABA977519723805000EB990 /* InfoPlist.strings */; };
 		CABA977919723805000EB990 /* SpaceCannon2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = CABA977819723805000EB990 /* SpaceCannon2Tests.m */; };
+		CABA978F1972395D000EB990 /* Ammo0@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA97831972395D000EB990 /* Ammo0@2x.png */; };
+		CABA97901972395D000EB990 /* Ammo1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA97841972395D000EB990 /* Ammo1@2x.png */; };
+		CABA97911972395D000EB990 /* Ammo2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA97851972395D000EB990 /* Ammo2@2x.png */; };
+		CABA97921972395D000EB990 /* Ammo3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA97861972395D000EB990 /* Ammo3@2x.png */; };
+		CABA97931972395D000EB990 /* Ammo4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA97871972395D000EB990 /* Ammo4@2x.png */; };
+		CABA97941972395D000EB990 /* Ammo5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA97881972395D000EB990 /* Ammo5@2x.png */; };
+		CABA97951972395D000EB990 /* Ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA97891972395D000EB990 /* Ball@2x.png */; };
+		CABA97961972395D000EB990 /* Block@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA978A1972395D000EB990 /* Block@2x.png */; };
+		CABA97971972395D000EB990 /* BlueBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA978B1972395D000EB990 /* BlueBar@2x.png */; };
+		CABA97981972395D000EB990 /* Cannon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA978C1972395D000EB990 /* Cannon@2x.png */; };
+		CABA97991972395D000EB990 /* Halo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA978D1972395D000EB990 /* Halo@2x.png */; };
+		CABA979A1972395D000EB990 /* Starfield@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CABA978E1972395D000EB990 /* Starfield@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +72,18 @@
 		CABA977419723805000EB990 /* SpaceCannon2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpaceCannon2Tests-Info.plist"; sourceTree = "<group>"; };
 		CABA977619723805000EB990 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CABA977819723805000EB990 /* SpaceCannon2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpaceCannon2Tests.m; sourceTree = "<group>"; };
+		CABA97831972395D000EB990 /* Ammo0@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ammo0@2x.png"; sourceTree = "<group>"; };
+		CABA97841972395D000EB990 /* Ammo1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ammo1@2x.png"; sourceTree = "<group>"; };
+		CABA97851972395D000EB990 /* Ammo2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ammo2@2x.png"; sourceTree = "<group>"; };
+		CABA97861972395D000EB990 /* Ammo3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ammo3@2x.png"; sourceTree = "<group>"; };
+		CABA97871972395D000EB990 /* Ammo4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ammo4@2x.png"; sourceTree = "<group>"; };
+		CABA97881972395D000EB990 /* Ammo5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ammo5@2x.png"; sourceTree = "<group>"; };
+		CABA97891972395D000EB990 /* Ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ball@2x.png"; sourceTree = "<group>"; };
+		CABA978A1972395D000EB990 /* Block@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Block@2x.png"; sourceTree = "<group>"; };
+		CABA978B1972395D000EB990 /* BlueBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlueBar@2x.png"; sourceTree = "<group>"; };
+		CABA978C1972395D000EB990 /* Cannon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Cannon@2x.png"; sourceTree = "<group>"; };
+		CABA978D1972395D000EB990 /* Halo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Halo@2x.png"; sourceTree = "<group>"; };
+		CABA978E1972395D000EB990 /* Starfield@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Starfield@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +145,7 @@
 		CABA974E19723805000EB990 /* SpaceCannon2 */ = {
 			isa = PBXGroup;
 			children = (
+				CABA97821972395D000EB990 /* space-cannon-assets */,
 				CABA975719723805000EB990 /* BRAppDelegate.h */,
 				CABA975819723805000EB990 /* BRAppDelegate.m */,
 				CABA975A19723805000EB990 /* Main.storyboard */,
@@ -162,6 +187,25 @@
 				CABA977519723805000EB990 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CABA97821972395D000EB990 /* space-cannon-assets */ = {
+			isa = PBXGroup;
+			children = (
+				CABA97831972395D000EB990 /* Ammo0@2x.png */,
+				CABA97841972395D000EB990 /* Ammo1@2x.png */,
+				CABA97851972395D000EB990 /* Ammo2@2x.png */,
+				CABA97861972395D000EB990 /* Ammo3@2x.png */,
+				CABA97871972395D000EB990 /* Ammo4@2x.png */,
+				CABA97881972395D000EB990 /* Ammo5@2x.png */,
+				CABA97891972395D000EB990 /* Ball@2x.png */,
+				CABA978A1972395D000EB990 /* Block@2x.png */,
+				CABA978B1972395D000EB990 /* BlueBar@2x.png */,
+				CABA978C1972395D000EB990 /* Cannon@2x.png */,
+				CABA978D1972395D000EB990 /* Halo@2x.png */,
+				CABA978E1972395D000EB990 /* Starfield@2x.png */,
+			);
+			path = "space-cannon-assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,10 +285,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABA97941972395D000EB990 /* Ammo5@2x.png in Resources */,
+				CABA97951972395D000EB990 /* Ball@2x.png in Resources */,
 				CABA975319723805000EB990 /* InfoPlist.strings in Resources */,
+				CABA97971972395D000EB990 /* BlueBar@2x.png in Resources */,
+				CABA97931972395D000EB990 /* Ammo4@2x.png in Resources */,
+				CABA97961972395D000EB990 /* Block@2x.png in Resources */,
+				CABA978F1972395D000EB990 /* Ammo0@2x.png in Resources */,
+				CABA97901972395D000EB990 /* Ammo1@2x.png in Resources */,
 				CABA976619723805000EB990 /* Images.xcassets in Resources */,
 				CABA976419723805000EB990 /* Spaceship.png in Resources */,
 				CABA975C19723805000EB990 /* Main.storyboard in Resources */,
+				CABA979A1972395D000EB990 /* Starfield@2x.png in Resources */,
+				CABA97921972395D000EB990 /* Ammo3@2x.png in Resources */,
+				CABA97991972395D000EB990 /* Halo@2x.png in Resources */,
+				CABA97911972395D000EB990 /* Ammo2@2x.png in Resources */,
+				CABA97981972395D000EB990 /* Cannon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
