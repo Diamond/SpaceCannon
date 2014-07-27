@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA2638CE19855613007407CF /* HaloExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA2638CC19855613007407CF /* HaloExplosion.sks */; };
+		CA2638CF19855613007407CF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2638CD19855613007407CF /* spark.png */; };
 		CABA974719723805000EB990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974619723805000EB990 /* Foundation.framework */; };
 		CABA974919723805000EB990 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974819723805000EB990 /* CoreGraphics.framework */; };
 		CABA974B19723805000EB990 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974A19723805000EB990 /* UIKit.framework */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA2638CC19855613007407CF /* HaloExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HaloExplosion.sks; sourceTree = "<group>"; };
+		CA2638CD19855613007407CF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		CABA974319723805000EB990 /* SpaceCannon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceCannon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABA974619723805000EB990 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CABA974819723805000EB990 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -153,6 +157,8 @@
 				CABA975E19723805000EB990 /* BRViewController.m */,
 				CABA976019723805000EB990 /* BRMyScene.h */,
 				CABA976119723805000EB990 /* BRMyScene.m */,
+				CA2638CC19855613007407CF /* HaloExplosion.sks */,
+				CA2638CD19855613007407CF /* spark.png */,
 				CABA976319723805000EB990 /* Spaceship.png */,
 				CABA976519723805000EB990 /* Images.xcassets */,
 				CABA974F19723805000EB990 /* Supporting Files */,
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CABA97941972395D000EB990 /* Ammo5@2x.png in Resources */,
+				CA2638CF19855613007407CF /* spark.png in Resources */,
 				CABA97951972395D000EB990 /* Ball@2x.png in Resources */,
 				CABA975319723805000EB990 /* InfoPlist.strings in Resources */,
 				CABA97971972395D000EB990 /* BlueBar@2x.png in Resources */,
@@ -295,6 +302,7 @@
 				CABA97901972395D000EB990 /* Ammo1@2x.png in Resources */,
 				CABA976619723805000EB990 /* Images.xcassets in Resources */,
 				CABA976419723805000EB990 /* Spaceship.png in Resources */,
+				CA2638CE19855613007407CF /* HaloExplosion.sks in Resources */,
 				CABA975C19723805000EB990 /* Main.storyboard in Resources */,
 				CABA979A1972395D000EB990 /* Starfield@2x.png in Resources */,
 				CABA97921972395D000EB990 /* Ammo3@2x.png in Resources */,
@@ -529,6 +537,7 @@
 				CABA977E19723805000EB990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CABA977F19723805000EB990 /* Build configuration list for PBXNativeTarget "SpaceCannon2Tests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +546,7 @@
 				CABA978119723805000EB990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
