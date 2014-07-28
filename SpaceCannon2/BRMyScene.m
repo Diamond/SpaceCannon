@@ -11,6 +11,7 @@
 @implementation BRMyScene {
     SKNode *_mainLayer;
     SKSpriteNode *_cannon;
+    SKSpriteNode *_ammoDisplay;
     BOOL _didShoot;
 }
 
@@ -19,9 +20,10 @@ static const CGFloat HALO_LOW_ANGLE  = 200.0f * M_PI / 180.0f;
 static const CGFloat HALO_HIGH_ANGLE = 340.0f * M_PI / 180.0f;
 static const CGFloat HALO_SPEED      = 100.0f;
 
-static const uint32_t HALO_CATEGORY = 0x1 << 0;
-static const uint32_t BALL_CATEGORY = 0x1 << 1;
-static const uint32_t EDGE_CATEGORY = 0x1 << 2;
+static const uint32_t HALO_CATEGORY   = 0x1 << 0;
+static const uint32_t BALL_CATEGORY   = 0x1 << 1;
+static const uint32_t EDGE_CATEGORY   = 0x1 << 2;
+static const uint32_t SHIELD_CATEGORY = 0x1 << 3;
 
 static inline CGVector radiansToVector(CGFloat radians)
 {
@@ -78,12 +80,44 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
                                                    [SKAction performSelector:@selector(spawnHalo) onTarget:self]
                                                    ]];
         [self runAction:[SKAction repeatActionForever:spawnHalo]];
+        
+        _ammoDisplay = [SKSpriteNode spriteNodeWithImageNamed:@"Ammo5"];
+        _ammoDisplay.anchorPoint = CGPointMake(0.5f, 0.0f);
+        _ammoDisplay.position    = _cannon.position;
+        [_mainLayer addChild:_ammoDisplay];
+        self.ammo = 5;
+        
+        SKAction *incrementAmmo = [SKAction sequence:@[[SKAction waitForDuration:1], [SKAction runBlock:^{
+            self.ammo++;
+        }]]];
+        [self runAction:[SKAction repeatActionForever:incrementAmmo]];
+        
+        for (int i = 0; i < 6; i++) {
+            SKSpriteNode *shield = [SKSpriteNode spriteNodeWithImageNamed:@"Block"];
+            shield.position = CGPointMake(35 + (50 * i), 90);
+            shield.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(42, 9)];
+            shield.physicsBody.categoryBitMask  = SHIELD_CATEGORY;
+            shield.physicsBody.collisionBitMask = 0;
+            [_mainLayer addChild:shield];
+        }
     }
     return self;
 }
 
+-(void)setAmmo:(int)ammo
+{
+    if (ammo >= 0 && ammo <= 5) {
+        _ammo = ammo;
+        _ammoDisplay.texture = [SKTexture textureWithImageNamed:[NSString stringWithFormat:@"Ammo%d", ammo]];
+    }
+}
+
 -(void)shoot
 {
+    if (self.ammo <= 0) {
+        return;
+    }
+    self.ammo--;
     SKSpriteNode *ball = [SKSpriteNode spriteNodeWithImageNamed:@"Ball"];
     CGVector rotationVector = radiansToVector(_cannon.zRotation);
     ball.name = @"ball";
@@ -136,7 +170,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
     halo.physicsBody.friction = 0.0f;
     halo.physicsBody.categoryBitMask = HALO_CATEGORY;
     halo.physicsBody.collisionBitMask = EDGE_CATEGORY;
-    halo.physicsBody.contactTestBitMask = BALL_CATEGORY;
+    halo.physicsBody.contactTestBitMask = BALL_CATEGORY | SHIELD_CATEGORY;
     [self addChild:halo];
 }
 
@@ -159,9 +193,31 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
     
     if (firstBody.categoryBitMask == HALO_CATEGORY && secondBody.categoryBitMask == BALL_CATEGORY) {
         // Collision between halo and ball
+        [self addExplosion:firstBody.node.position];
+        
         [firstBody.node removeFromParent];
         [secondBody.node removeFromParent];
     }
+    
+    if (firstBody.categoryBitMask == HALO_CATEGORY && secondBody.categoryBitMask == SHIELD_CATEGORY) {
+        // Collision between halo and ball
+        [self addExplosion:firstBody.node.position];
+        
+        [firstBody.node removeFromParent];
+        [secondBody.node removeFromParent];
+    }
+}
+
+-(void)addExplosion:(CGPoint)position
+{
+    NSString *explosionPath = [[NSBundle mainBundle] pathForResource:@"HaloExplosion" ofType:@"sks"];
+    SKEmitterNode *explosion = [NSKeyedUnarchiver unarchiveObjectWithFile:explosionPath];
+    
+    explosion.position = position;
+    [_mainLayer addChild:explosion];
+    
+    SKAction *removeExplosion = [SKAction sequence:@[[SKAction waitForDuration:1.5f], [SKAction removeFromParent]]];
+    [explosion runAction:removeExplosion];
 }
 
 @end
