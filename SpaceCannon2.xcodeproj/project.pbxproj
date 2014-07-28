@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CA2638CE19855613007407CF /* HaloExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA2638CC19855613007407CF /* HaloExplosion.sks */; };
 		CA2638CF19855613007407CF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2638CD19855613007407CF /* spark.png */; };
+		CA70F4AC1985FC6B0068E044 /* LifeBarExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA70F4AB1985FC6B0068E044 /* LifeBarExplosion.sks */; };
 		CABA974719723805000EB990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974619723805000EB990 /* Foundation.framework */; };
 		CABA974919723805000EB990 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974819723805000EB990 /* CoreGraphics.framework */; };
 		CABA974B19723805000EB990 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974A19723805000EB990 /* UIKit.framework */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		CA2638CC19855613007407CF /* HaloExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HaloExplosion.sks; sourceTree = "<group>"; };
 		CA2638CD19855613007407CF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		CA70F4AB1985FC6B0068E044 /* LifeBarExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LifeBarExplosion.sks; sourceTree = "<group>"; };
 		CABA974319723805000EB990 /* SpaceCannon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceCannon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABA974619723805000EB990 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CABA974819723805000EB990 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -157,6 +159,7 @@
 				CABA975E19723805000EB990 /* BRViewController.m */,
 				CABA976019723805000EB990 /* BRMyScene.h */,
 				CABA976119723805000EB990 /* BRMyScene.m */,
+				CA70F4AB1985FC6B0068E044 /* LifeBarExplosion.sks */,
 				CA2638CC19855613007407CF /* HaloExplosion.sks */,
 				CA2638CD19855613007407CF /* spark.png */,
 				CABA976319723805000EB990 /* Spaceship.png */,
@@ -307,6 +310,7 @@
 				CABA979A1972395D000EB990 /* Starfield@2x.png in Resources */,
 				CABA97921972395D000EB990 /* Ammo3@2x.png in Resources */,
 				CABA97991972395D000EB990 /* Halo@2x.png in Resources */,
+				CA70F4AC1985FC6B0068E044 /* LifeBarExplosion.sks in Resources */,
 				CABA97911972395D000EB990 /* Ammo2@2x.png in Resources */,
 				CABA97981972395D000EB990 /* Cannon@2x.png in Resources */,
 			);
