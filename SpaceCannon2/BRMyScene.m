@@ -59,18 +59,20 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         leftEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointZero toPoint:CGPointMake(0.0, self.size.height)];
         leftEdge.position = CGPointZero;
         leftEdge.physicsBody.categoryBitMask = EDGE_CATEGORY;
+        leftEdge.physicsBody.contactTestBitMask = BALL_CATEGORY;
         
         SKNode *rightEdge = [[SKNode alloc] init];
         rightEdge.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointZero toPoint:CGPointMake(0.0, self.size.height)];
         rightEdge.position = CGPointMake(self.size.width, 0.0f);
         rightEdge.physicsBody.categoryBitMask = EDGE_CATEGORY;
+        rightEdge.physicsBody.contactTestBitMask = BALL_CATEGORY;
         
         [self addChild:leftEdge];
         [self addChild:rightEdge];
         
         _cannon = [SKSpriteNode spriteNodeWithImageNamed:@"Cannon"];
         _cannon.position = CGPointMake(self.size.width * 0.5, 0.0f);
-        [_mainLayer addChild:_cannon];
+        [self addChild:_cannon];
         
         SKAction *rotateCannon = [SKAction sequence:@[[SKAction rotateByAngle:M_PI duration:2],[SKAction rotateByAngle:-M_PI duration:2]]];
         [_cannon runAction:[SKAction repeatActionForever:rotateCannon]];
@@ -85,32 +87,42 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         _ammoDisplay = [SKSpriteNode spriteNodeWithImageNamed:@"Ammo5"];
         _ammoDisplay.anchorPoint = CGPointMake(0.5f, 0.0f);
         _ammoDisplay.position    = _cannon.position;
-        [_mainLayer addChild:_ammoDisplay];
-        self.ammo = 5;
+        [self addChild:_ammoDisplay];
+        
         
         SKAction *incrementAmmo = [SKAction sequence:@[[SKAction waitForDuration:1], [SKAction runBlock:^{
             self.ammo++;
         }]]];
         [self runAction:[SKAction repeatActionForever:incrementAmmo]];
         
-        for (int i = 0; i < 6; i++) {
-            SKSpriteNode *shield = [SKSpriteNode spriteNodeWithImageNamed:@"Block"];
-            shield.position = CGPointMake(35 + (50 * i), 90);
-            shield.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(42, 9)];
-            shield.physicsBody.categoryBitMask  = SHIELD_CATEGORY;
-            shield.physicsBody.collisionBitMask = 0;
-            [_mainLayer addChild:shield];
-        }
-        
-        SKSpriteNode *lifeBar = [SKSpriteNode spriteNodeWithImageNamed:@"BlueBar"];
-        lifeBar.position = CGPointMake(self.size.width / 2, 70);
-        lifeBar.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(-lifeBar.size.width / 2, 0) toPoint:CGPointMake(lifeBar.size.width / 2, 0)];
-        lifeBar.physicsBody.categoryBitMask = LIFEBAR_CATEGORY;
-        lifeBar.physicsBody.collisionBitMask = 0;
-        [_mainLayer addChild:lifeBar];
-        
+        [self newGame];
     }
     return self;
+}
+
+-(void)newGame
+{
+    [_mainLayer removeAllChildren];
+    
+    self.ammo = 5;
+    
+    for (int i = 0; i < 6; i++) {
+        SKSpriteNode *shield = [SKSpriteNode spriteNodeWithImageNamed:@"Block"];
+        shield.position = CGPointMake(35 + (50 * i), 90);
+        shield.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(42, 9)];
+        shield.physicsBody.categoryBitMask  = SHIELD_CATEGORY;
+        shield.physicsBody.collisionBitMask = 0;
+        shield.name = @"shield";
+        [_mainLayer addChild:shield];
+    }
+    
+    SKSpriteNode *lifeBar = [SKSpriteNode spriteNodeWithImageNamed:@"BlueBar"];
+    lifeBar.position = CGPointMake(self.size.width / 2, 70);
+    lifeBar.physicsBody = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(-lifeBar.size.width / 2, 0) toPoint:CGPointMake(lifeBar.size.width / 2, 0)];
+    lifeBar.physicsBody.categoryBitMask = LIFEBAR_CATEGORY;
+    lifeBar.physicsBody.collisionBitMask = 0;
+    lifeBar.name = @"lifebar";
+    [_mainLayer addChild:lifeBar];
 }
 
 -(void)setAmmo:(int)ammo
@@ -180,6 +192,7 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
     halo.physicsBody.categoryBitMask = HALO_CATEGORY;
     halo.physicsBody.collisionBitMask = EDGE_CATEGORY;
     halo.physicsBody.contactTestBitMask = BALL_CATEGORY | SHIELD_CATEGORY | LIFEBAR_CATEGORY;
+    halo.name = @"halo";
     [self addChild:halo];
 }
 
@@ -208,6 +221,10 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         [secondBody.node removeFromParent];
     }
     
+    if (firstBody.categoryBitMask == BALL_CATEGORY && secondBody.categoryBitMask == EDGE_CATEGORY) {
+        [self addExplosion:contact.contactPoint withName:@"BallExplosion"];
+    }
+    
     if (firstBody.categoryBitMask == HALO_CATEGORY && secondBody.categoryBitMask == SHIELD_CATEGORY) {
         [self addExplosion:firstBody.node.position withName:@"HaloExplosion"];
         
@@ -220,7 +237,26 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         
         [firstBody.node removeFromParent];
         [secondBody.node removeFromParent];
+        
+        [self gameOver];
     }
+}
+
+-(void)gameOver
+{
+    [_mainLayer enumerateChildNodesWithName:@"halo" usingBlock:^(SKNode *node, BOOL *stop) {
+        [self addExplosion:node.position withName:@"HaloExplosion"];
+    }];
+    
+    [_mainLayer enumerateChildNodesWithName:@"ball" usingBlock:^(SKNode *node, BOOL *stop) {
+        [self addExplosion:node.position withName:@"BallExplosion"];
+    }];
+    
+    [_mainLayer enumerateChildNodesWithName:@"shield" usingBlock:^(SKNode *node, BOOL *stop) {
+        [self addExplosion:node.position withName:@"BallExplosion"];
+    }];
+    
+    [self performSelector:@selector(newGame) withObject:nil afterDelay:1.5f];
 }
 
 -(void)addExplosion:(CGPoint)position withName:(NSString*)name
