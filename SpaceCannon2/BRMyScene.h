@@ -10,6 +10,7 @@
 
 @interface BRMyScene : SKScene <SKPhysicsContactDelegate>
 
-@property (nonatomic,assign) int ammo;
+@property (nonatomic) int ammo;
+@property (nonatomic) int score;
 
 @end

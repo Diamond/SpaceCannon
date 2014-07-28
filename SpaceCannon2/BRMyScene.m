@@ -12,6 +12,7 @@
     SKNode *_mainLayer;
     SKSpriteNode *_cannon;
     SKSpriteNode *_ammoDisplay;
+    SKLabelNode  *_scoreLabel;
     BOOL _didShoot;
 }
 
@@ -19,6 +20,7 @@ static const CGFloat SHOOT_SPEED     = 1000.0f;
 static const CGFloat HALO_LOW_ANGLE  = 200.0f * M_PI / 180.0f;
 static const CGFloat HALO_HIGH_ANGLE = 340.0f * M_PI / 180.0f;
 static const CGFloat HALO_SPEED      = 100.0f;
+static const int     POINTS_PER_HALO = 100;
 
 static const uint32_t HALO_CATEGORY    = 0x1 << 0;
 static const uint32_t BALL_CATEGORY    = 0x1 << 1;
@@ -95,9 +97,20 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         }]]];
         [self runAction:[SKAction repeatActionForever:incrementAmmo]];
         
+        _scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"DIN Alternate"];
+        _scoreLabel.position = CGPointMake(15, 10);
+        _scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentModeLeft;
+        _scoreLabel.fontSize = 12;
+        [self addChild:_scoreLabel];
+        
         [self newGame];
     }
     return self;
+}
+
+-(void)updateScore
+{
+    _scoreLabel.text = [NSString stringWithFormat:@"Score: %d", self.score];
 }
 
 -(void)newGame
@@ -123,6 +136,9 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
     lifeBar.physicsBody.collisionBitMask = 0;
     lifeBar.name = @"lifebar";
     [_mainLayer addChild:lifeBar];
+    
+    self.score = 0;
+    [self updateScore];
 }
 
 -(void)setAmmo:(int)ammo
@@ -219,6 +235,8 @@ static inline CGFloat randomInRange(CGFloat low, CGFloat high)
         
         [firstBody.node removeFromParent];
         [secondBody.node removeFromParent];
+        self.score += POINTS_PER_HALO;
+        [self updateScore];
     }
     
     if (firstBody.categoryBitMask == BALL_CATEGORY && secondBody.categoryBitMask == EDGE_CATEGORY) {
