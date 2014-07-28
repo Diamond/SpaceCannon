@@ -10,8 +10,6 @@
 		CA2638CE19855613007407CF /* HaloExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA2638CC19855613007407CF /* HaloExplosion.sks */; };
 		CA2638CF19855613007407CF /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = CA2638CD19855613007407CF /* spark.png */; };
 		CA70F4AC1985FC6B0068E044 /* LifeBarExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA70F4AB1985FC6B0068E044 /* LifeBarExplosion.sks */; };
-		CA70F4B1198600840068E044 /* LeftSideExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA70F4AF198600840068E044 /* LeftSideExplosion.sks */; };
-		CA70F4B8198601910068E044 /* RightSideExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA70F4B7198601910068E044 /* RightSideExplosion.sks */; };
 		CA70F4BA1986033E0068E044 /* BallExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = CA70F4B91986033E0068E044 /* BallExplosion.sks */; };
 		CABA974719723805000EB990 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974619723805000EB990 /* Foundation.framework */; };
 		CABA974919723805000EB990 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CABA974819723805000EB990 /* CoreGraphics.framework */; };
@@ -58,8 +56,6 @@
 		CA2638CC19855613007407CF /* HaloExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = HaloExplosion.sks; sourceTree = "<group>"; };
 		CA2638CD19855613007407CF /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		CA70F4AB1985FC6B0068E044 /* LifeBarExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LifeBarExplosion.sks; sourceTree = "<group>"; };
-		CA70F4AF198600840068E044 /* LeftSideExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = LeftSideExplosion.sks; sourceTree = "<group>"; };
-		CA70F4B7198601910068E044 /* RightSideExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = RightSideExplosion.sks; sourceTree = "<group>"; };
 		CA70F4B91986033E0068E044 /* BallExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BallExplosion.sks; sourceTree = "<group>"; };
 		CABA974319723805000EB990 /* SpaceCannon2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceCannon2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CABA974619723805000EB990 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -161,8 +157,6 @@
 				CABA975719723805000EB990 /* BRAppDelegate.h */,
 				CABA975819723805000EB990 /* BRAppDelegate.m */,
 				CABA975A19723805000EB990 /* Main.storyboard */,
-				CA70F4AF198600840068E044 /* LeftSideExplosion.sks */,
-				CA70F4B7198601910068E044 /* RightSideExplosion.sks */,
 				CABA975D19723805000EB990 /* BRViewController.h */,
 				CABA975E19723805000EB990 /* BRViewController.m */,
 				CABA976019723805000EB990 /* BRMyScene.h */,
@@ -303,9 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA70F4B8198601910068E044 /* RightSideExplosion.sks in Resources */,
 				CABA97941972395D000EB990 /* Ammo5@2x.png in Resources */,
-				CA70F4B1198600840068E044 /* LeftSideExplosion.sks in Resources */,
 				CA2638CF19855613007407CF /* spark.png in Resources */,
 				CABA97951972395D000EB990 /* Ball@2x.png in Resources */,
 				CABA975319723805000EB990 /* InfoPlist.strings in Resources */,
